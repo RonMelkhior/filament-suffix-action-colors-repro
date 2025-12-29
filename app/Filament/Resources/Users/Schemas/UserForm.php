@@ -14,7 +14,10 @@ class UserForm
         return $schema
             ->components([
                 TextInput::make('name')
+                    ->prefixIcon('heroicon-m-user')
+                    ->prefixIconColor('success')
                     ->required(),
+
                 TextInput::make('email')
                     ->label('Email address')
                     ->email()
@@ -29,6 +32,7 @@ class UserForm
                     ),
                 DateTimePicker::make('email_verified_at'),
                 TextInput::make('password')
+                    ->prefixIcon('heroicon-m-user')
                     ->password()
                     ->required(),
             ]);
